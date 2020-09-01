@@ -16,11 +16,11 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword(){
 
   // Get password length
-  var passwordLength = Number(window.prompt("How long do you want your password to be?"));
+  var passwordLength = Number(window.prompt("How many characters do you want your password to be?"));
 
   while(passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength) || !Number.isInteger(passwordLength)){
-    alert("Your password must be a  whole number between 8 and 128 characters");
-    var passwordLength = Number(window.prompt("How long do you want your password to be?"));
+    alert("Your password must be a whole number between 8 and 128 characters");
+    var passwordLength = Number(window.prompt("How many characters do you want your password to be?"));
   }
 
   // Get password case
@@ -33,7 +33,7 @@ function generatePassword(){
     var hasLowercase = window.confirm("Do you want your password to use lowercase characters?");
   }
 
-  // Get password extra characters
+  // Get any extra password characters (numbers and special chars)
   var hasNumeric = window.confirm("Do you want your password to include numbers?");
-  var hasSpecial = window.confirm("Do you want your password to include special characters?")
+  var hasSpecial = window.confirm("Do you want your password to include special characters?"); 
 }
