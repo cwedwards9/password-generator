@@ -35,5 +35,23 @@ function generatePassword(){
 
   // Get any extra password characters (numbers and special chars)
   var hasNumeric = window.confirm("Do you want your password to include numbers?");
-  var hasSpecial = window.confirm("Do you want your password to include special characters?"); 
+  var hasSpecial = window.confirm("Do you want your password to include special characters?");
+
+  // Generate the password based off of the input from the user
+  var characters = "";
+  if(hasUppercase){
+    characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  }
+  if(hasLowercase){
+    characters += "abcdefghijklmnopqrstuvwxyz";
+  }
+  if(hasNumeric){
+    characters+= "1234567890";
+  }
+  if(hasSpecial){
+    characters+= "!#$%&()+-/:?@[\]^_~";
+  }
+
+  console.log("The user's password can contain these characters: " + characters);
+
 }
