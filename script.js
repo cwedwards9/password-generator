@@ -12,7 +12,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Generating password
+// Generate password
 function generatePassword(){
 
   // Get password length
@@ -52,6 +52,15 @@ function generatePassword(){
     characters+= "!#$%&()+-/:?@[\]^_~";
   }
 
+  // Log and check the output for the characters string
   console.log("The user's password can contain these characters: " + characters);
 
+  /* Create a for loop that will iterate as many times as the number that is set for the passwordLength variable and 
+  randomly select a character each iteration to add to the user's password. Then return the concatenated password */
+  var userPassword= "";
+    for (var i = 0; i < passwordLength; i++){
+      var randomNum = Math.floor(Math.random() * Math.floor(characters.length));
+      userPassword += characters[randomNum];
+    }
+    return userPassword; 
 }
