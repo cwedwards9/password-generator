@@ -49,18 +49,21 @@ function generatePassword(){
     characters+= "1234567890";
   }
   if(hasSpecial){
-    characters+= "!#$%&()+-/:?@[\]^_~";
+    characters+= "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
   }
 
-  // Log and check the output for the characters string
-  console.log("The user's password can contain these characters: " + characters);
+  // Convert string to array
+  var charactersArray = characters.split("");
+
+  // Log and check the output for the characters array
+  console.log(charactersArray);
 
   /* Create a for loop that will iterate as many times as the number that is set for the passwordLength variable and 
   randomly select a character each iteration to add to the user's password. Then return the concatenated password */
   var userPassword= "";
     for (var i = 0; i < passwordLength; i++){
-      var randomNum = Math.floor(Math.random() * Math.floor(characters.length));
-      userPassword += characters[randomNum];
+      var randomNum = Math.floor(Math.random() * Math.floor(charactersArray.length - 1));
+      userPassword += charactersArray[randomNum];
     }
     return userPassword; 
 }
