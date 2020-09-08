@@ -1,5 +1,5 @@
 # password-generator
-Creating an application that generates a random password based on user-selected criteria from window prompts and confirms.
+An application that generates a random password based on user-selected criteria from window prompts and confirms.
 
 ## script.js
 After looking over the code given in this file, I created a function called 'generatePassword' where I have all of my code for getting password criteria from the user, creating the password, and returning a new and unique password.
