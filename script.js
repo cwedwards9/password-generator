@@ -62,7 +62,7 @@ function generatePassword(){
   randomly select a character each iteration to add to the user's password. Then return the concatenated password */
   var userPassword= "";
     for (var i = 0; i < passwordLength; i++){
-      var randomNum = Math.floor(Math.random() * Math.floor(charactersArray.length - 1));
+      var randomNum = Math.floor(Math.random() * Math.floor(charactersArray.length));
       userPassword += charactersArray[randomNum];
     }
     return userPassword; 
